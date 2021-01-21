@@ -13,23 +13,23 @@ public:
 	Platform()
 	{	
 	};
-	Platform(const string& p_platformName, const string& p_manufacturer)
+	Platform(const string& m_pPlatformName, const string& m_pManufacturer)
 	{
-		setPlatformName(p_platformName);
-		setManufacturer(p_manufacturer);
+		setPlatformName(m_pPlatformName);
+		setManufacturer(m_pManufacturer);
 
 	}
-	void setPlatformName(const string& p_platformName)
+	void setPlatformName(const string& m_pPlatformName)
 	{
-		m_platformName = p_platformName;
+		m_platformName = m_pPlatformName;
 	}
 	string getPlatformName()
 	{
 		return m_platformName;
 	}
-	void setManufacturer(const string& p_manufacturer)
+	void setManufacturer(const string& m_pManufacturer)
 	{
-		 m_manufacturer = p_manufacturer;
+		 m_manufacturer = m_pManufacturer;
 	}
 	string getManufacturer()
 	{
@@ -49,32 +49,32 @@ public:
 	Game()
 	{
 	}
-	Game(const string& p_gameName, const string& p_gamePublisher, const string& p_gameDeveloper)
+	Game(const string& m_pGameName, const string& m_pGamePublisher, const string& m_pGameDeveloper)
 	{
-		setGameName(p_gameName);
-		setGamePublisher(p_gamePublisher);
-		setGameDeveloper(p_gameDeveloper);
+		setGameName(m_pGameName);
+		setGamePublisher(m_pGamePublisher);
+		setGameDeveloper(m_pGameDeveloper);
 
 	}
-	void setGameName(const string& p_gameName)
+	void setGameName(const string& m_pGameName)
 	{
-		m_gameName = p_gameName;
+		m_gameName = m_pGameName;
 	}
 	string getGameName()
 	{
 		return m_gameName;
 	}
-	void setGamePublisher(const string& p_gamePublisher)
+	void setGamePublisher(const string&m_pGamePublisher)
 	{
-		m_gamePublisher = p_gamePublisher;
+		m_gamePublisher = m_pGamePublisher;
 	}
 	string getGamePublisher()
 	{
 		return m_gamePublisher;
 	}
-	void setGameDeveloper(const string& p_gameDeveloper)
+	void setGameDeveloper(const string& m_pGameDeveloper)
 	{
-		m_gameDeveloper = p_gameDeveloper;
+		m_gameDeveloper = m_pGameDeveloper;
 	}
 	string getGameDeveloper()
 	{
@@ -93,31 +93,31 @@ public:
 	Achievement()
 	{
 	}
-	Achievement(const string& p_achieveTitle, const string& p_achieveDescription, const int& p_achieveScore)
+	Achievement(const string& m_pAchieveTitle, const string& m_pAchieveDescription, const int& m_pAchieveScore)
 	{
-		setAchieveTitle(p_achieveTitle);
-		setAchieveDescription(p_achieveDescription);
-		setAchieveScore(p_achieveScore);
+		setAchieveTitle(m_pAchieveTitle);
+		setAchieveDescription(m_pAchieveDescription);
+		setAchieveScore(m_pAchieveScore);
 	}
-	void setAchieveTitle(const string& p_achieveTitle)
+	void setAchieveTitle(const string& m_pAchieveTitle)
 	{
-		m_achieveTitle = p_achieveTitle;
+		m_achieveTitle = m_pAchieveTitle;
 	}
 	string getAchieveTitle()
 	{
 		return m_achieveTitle;
 	}	
-	void setAchieveDescription(const string& p_achieveDescription)
+	void setAchieveDescription(const string& m_pAchieveDescription)
 	{
-		m_achieveDescription = p_achieveDescription;
+		m_achieveDescription = m_pAchieveDescription;
 	}
 	string getAchieveDescription()
 	{
 		return m_achieveDescription;
 	}	
-	void setAchieveScore(const int& p_achieveScore)
+	void setAchieveScore(const int& m_pAchieveScore)
 	{
-		m_achieveScore = p_achieveScore;
+		m_achieveScore = m_pAchieveScore;
 	}
 	int getAchieveScore()
 	{
