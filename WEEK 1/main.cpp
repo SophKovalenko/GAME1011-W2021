@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Platform.h"
+#include "Classes.h"
 using namespace std;
 
 int main()
@@ -11,23 +11,23 @@ int main()
 	cout << "***********************************************************************" << endl << endl;
 	cout << "1. PlayStation " << endl;
 	cout << "2. Xbox " << endl;
-	cout << "3. Nintendo Switch " << endl;
+	cout << "3. Switch " << endl;
 	cout << "4. PC " << endl;
-	cout << "5. IoS/ Andriod " << endl;
+	cout << "5. Android " << endl;
 	cin >> choice;
 	cout << endl;
 	
 	switch (choice)
 	{
-	case 1: Platform ;
+	case 1: Platform playstation("PlayStation", "Sony");
 
-	case 2: Platform ;
+	case 2: Platform xbox("Xbox", "Microsoft");
 
-	case 3: Platform ;
+	case 3: Platform nSwitch("Switch", "Nintendo");
 
-	case 4: Platform;
+	case 4: Platform pc("PC", "Microsoft");
 
-	case 5: Platform;
+	case 5: Platform android("Android", "Google");
 
 	default: cout << "You have made an incorrect selection" << endl;
 	}

@@ -7,7 +7,7 @@ class Platform
 private: 
 	string m_platformName,
 		   m_manufacturer;
-	//array of games
+	Game games[5];
 
 public:
 	Platform()
@@ -35,6 +35,10 @@ public:
 	{
 		return m_manufacturer;
 	}
+	void displayInfo() const
+	{
+		cout << "You have chosen the " << m_platformName << " from " << m_manufacturer << endl;
+	}
 };
 
 class Game : public Platform
@@ -43,7 +47,7 @@ private:
 	string m_gameName,
 		   m_gamePublisher,
 	       m_gameDeveloper;
-	//array of achievments
+	Achievement achievements[5];
 
 public:
 	Game()
@@ -79,6 +83,10 @@ public:
 	string getGameDeveloper()
 	{
 		return m_gameDeveloper;
+	}
+	void displayInfo() const
+	{
+		cout << "You have chosen the " << m_gameName << " from " << m_gamePublisher << " and " << m_gameDeveloper << endl;
 	}
 };
 
