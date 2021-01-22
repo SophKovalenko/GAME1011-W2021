@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Classes.h"
 using namespace std;
 
@@ -7,8 +8,11 @@ int main()
 	int choice;
 	const int numPlatforms = 5;
 	const int numGames = 5;
-	const int numAchieve = 6;
-	int gameNum;
+	int gameNum, achieveNum;
+	string achieveTitle, achieveDesc, achieveScore;
+	Achievement* pAchieve = nullptr;
+	//Game* pGame = nullptr;
+
 
 	cout << "Welcome to the Hall of Acievements!" << endl;
 	cout << "Please select the number of the platform you would like to access (1-5)" << endl;
@@ -49,6 +53,34 @@ int main()
 			cout << game[index].getGameName() << endl;
 		}
 
+		cout << "Which game would you like to create an achievement for?" << endl;
+		cin >> gameNum;
+
+		cout << "How many achievements would you like to create?" << endl;
+		cin >> achieveNum;
+
+		for (int count = 0; count < achieveNum; count++)
+		{
+			cout << "Please enter the achievement title" << endl;
+			getline(cin, achieveTitle);
+
+			cout << "Please enter the achievement description" << endl;
+			getline(cin, achieveDesc);
+
+			cout << "Please enter the achievement score" << endl;
+			getline(cin, achieveScore);
+
+			pAchieve = new Achievement("", "", "");
+			pAchieve->setAchieve(achieveTitle, achieveDesc, achieveScore);
+
+			cout << "You have created the " << pAchieve->getAchieveTitle() << endl;
+			cout << pAchieve->getAchieveDescription() << endl;
+			cout << pAchieve->getAchieveScore() << endl;
+
+			delete pAchieve;
+			pAchieve = nullptr;
+		}
+		
 	}
 
 	if (choice == 2)
@@ -138,9 +170,6 @@ int main()
 			cout << game[index].getGameName() << endl;
 		}
 
-
-	/*	cout << "Which game would you like to create an achievement for?" << endl;
-		cin >> gameNum;*/
 	}
 
 

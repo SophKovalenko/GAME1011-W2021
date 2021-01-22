@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Platform
@@ -90,21 +91,22 @@ class Achievement : public Game
 {
 private:
 	string m_achieveTitle,
-		   m_achieveDescription;
-	int m_achieveScore;
+		m_achieveDescription,
+		m_achieveScore;
+	int m_achieveNum;
 
 public:
 	Achievement()
 	{
 	}
-	Achievement(string achieveTitle, string achieveDescription, int achieveScore)
+	Achievement(string achieveTitle, string achieveDescription, string achieveScore)
 	{
 		setAchieve(achieveTitle, achieveDescription, achieveScore);
 	}
 	~Achievement()
 	{}
 
-	void setAchieve(string achieveTitle, string achieveDescription, int achieveScore)
+	void setAchieve(string achieveTitle, string achieveDescription, string achieveScore)
 	{
 		m_achieveTitle = achieveTitle;
 		m_achieveDescription = achieveDescription;
@@ -112,20 +114,14 @@ public:
 	}
 	string getAchieveTitle()
 	{
-		cout << "Please enter a title for your achievement:" << endl;
-		cin >> m_achieveTitle; // change this to a getline
 		return m_achieveTitle;
 	}	
 	string getAchieveDescription()
 	{
-		cout << "Please enter a description for your achievement:" << endl;
-		cin >> m_achieveDescription; // change this to a getline
 		return m_achieveDescription;
 	}	
-	int getAchieveScore()
+	string getAchieveScore()
 	{
-		cout << "Please enter a score for your achievement:" << endl;
-		cin >> m_achieveScore; // change this to a getline
 		return m_achieveScore;
 	}
 };
