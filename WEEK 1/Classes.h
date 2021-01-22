@@ -82,7 +82,7 @@ public:
 	}
 	void displayInfo() const
 	{
-		cout << "You have chosen the " << m_gameName << " from " << m_gamePublisher << " and " << m_gameDeveloper << endl;
+		cout << "You have chosen the " << m_gameName << " from " << m_gamePublisher << " by " << m_gameDeveloper << endl;
 	}
 };
 

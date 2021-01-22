@@ -25,11 +25,11 @@ int main()
 
 		Game game[numGames] = //array of Game objects
 		{ Game("DUMMY", "DUMMY", "DUMMY"),
-		  Game("Persona 5", "", ""),
-		  Game("Dead by Daylight", "", ""),
-		  Game("Fall Guys", "", ""),
-		  Game("Little Hope", "", ""),
-		  Game("Resident Evil 3", "", "")
+		  Game("Persona 5", "Atlus", "P-Studio"),
+		  Game("Until Dawn", "Sony Computer Entertainment", "Supermassive Games"),
+		  Game("Fall Guys", "Devolver Digital", "Mediatonic"),
+		  Game("Little Hope", "Bandai Namco Entertainment", "Supermassive Games"),
+		  Game("Resident Evil 3", "Capcom", "Capcom")
 		};
 
 	}
@@ -40,11 +40,11 @@ int main()
 
 		Game game[numGames] = //array of Game objects
 		{ Game("DUMMY", "DUMMY", "DUMMY"),
-		  Game("Fortnight", "", ""),
-		  Game("Grand Theft Auto V", "", ""),
-		  Game("Apex Legends", "", ""),
-		  Game("Rocket League", "", ""),
-		  Game("Battlefield 5", "", "")
+		  Game("Fortnight", "Epic Games", "Warner Bros. Interactive Entertainment"),
+		  Game("Grand Theft Auto V", "Rockstar Games", "Rockstar North"),
+		  Game("Apex Legends", "Electronic Arts", "Respawn Entertainment"),
+		  Game("Rocket League", "Psyonix", "Psyonix"),
+		  Game("Battlefield 5", "Electronic Arts", "EA DICE")
 		};
 	}
 
@@ -54,11 +54,11 @@ int main()
 
 		Game game[numGames] = //array of Game objects
 		{ Game("DUMMY", "DUMMY", "DUMMY"),
-		  Game("SuperMario 3D AllStars", "", ""),
-		  Game("Animal Crossing", "", ""),
-		  Game("Hades", "", ""),
-		  Game("The Witcher 3", "", ""),
-		  Game("Celeste", "", "")
+		  Game("SuperMario 3D AllStars", "Nintendo", "Nintendo EPD"),
+		  Game("Animal Crossing","Nintendo", "Nintendo EPD"),
+		  Game("Hades", "Supergiant Games", "Supergiant Games"),
+		  Game("The Witcher 3", "CD Projekt Red", "CD Projekt Red"),
+		  Game("Celeste", "Matt Makes Games", "Matt Makes Games")
 		};
 	}
 
@@ -68,11 +68,11 @@ int main()
 
 		Game game[numGames] = //array of Game objects
 		{ Game("DUMMY", "DUMMY", "DUMMY"),
-		  Game("Control", "", ""),
-		  Game("Desperados 3", "", ""),
-		  Game("Disco Elysium", "", ""),
-		  Game("Doom Eternal", "", ""),
-		  Game("Dwarf Fortress", "", "")
+		  Game("Control", "505 Games", "Remedy Entertainment"),
+		  Game("Desperados 3", "THQ Nordic", "Mimimi Games"),
+		  Game("Disco Elysium", "ZA/UM", "ZA/UM"),
+		  Game("Doom Eternal", "Bethesda Softworks", "id Software"),
+		  Game("Dwarf Fortress", "Bay 12 Games", "Bay 12 Games")
 		};
 	}
 
@@ -82,11 +82,11 @@ int main()
 
 		Game game[numGames] = //array of Game objects
 		{ Game("DUMMY", "DUMMY", "DUMMY"),
-		  Game("Among Us", "", ""),
-		  Game("Robolox", "", ""),
-		  Game("Clash of Clans", "", ""),
-		  Game("Harry Potter", "", ""),
-		  Game("Hay Day", "", "")
+		  Game("Among Us", "Innersloth LLC", "Innersloth LLC"),
+		  Game("Robolox", "David Baszucki", "Robolox Corp."),
+		  Game("Clash of Clans", "Supercell", "Supercell"),
+		  Game("Harry Potter: Hogwarts Mystery", "Jam City", "Jam City"),
+		  Game("Hay Day", "Supercell", "Supercell")
 		};
 
 	}
