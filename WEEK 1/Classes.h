@@ -80,7 +80,7 @@ public:
 	{
 		return m_gameDeveloper;
 	}
-	void displayInfo() const
+	void displayInfo() 
 	{
 		cout << "You have chosen the " << m_gameName << " from " << m_gamePublisher << " by " << m_gameDeveloper << endl;
 	}
