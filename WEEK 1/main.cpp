@@ -7,6 +7,7 @@ int main()
 	char choice;
 	const int numGames = 6;
 	const int numAchieve = 6;
+	int gameNum;
 
 	cout << "Welcome to the Hall of Acievements!" << endl;
 	cout << "Please select the number of the platform you would like to access (1-5)" << endl;
@@ -88,6 +89,10 @@ int main()
 		  Game("Harry Potter: Hogwarts Mystery", "Jam City", "Jam City"),
 		  Game("Hay Day", "Supercell", "Supercell")
 		};
+
+		cout << "Which game would you like to create an achievement for?" << endl;
+		cin >> gameNum;
+
 
 	}
 

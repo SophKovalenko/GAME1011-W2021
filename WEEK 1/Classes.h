@@ -97,29 +97,35 @@ public:
 	Achievement()
 	{
 	}
-	Achievement(const string& m_pAchieveTitle, const string& m_pAchieveDescription, const int& m_pAchieveScore)
+	Achievement(string achieveTitle, string achieveDescription, int achieveScore)
 	{
-		setAchieve(m_pAchieveTitle, m_pAchieveDescription, m_pAchieveScore);
+		setAchieve(achieveTitle, achieveDescription, achieveScore);
 	}
 	~Achievement()
 	{}
 
-	void setAchieve(const string& m_pAchieveTitle, const string& m_pAchieveDescription, const int& m_pAchieveScore)
+	void setAchieve(string achieveTitle, string achieveDescription, int achieveScore)
 	{
-		m_achieveTitle = m_pAchieveTitle;
-		m_achieveDescription = m_pAchieveDescription;
-		m_achieveScore = m_pAchieveScore;
+		m_achieveTitle = achieveTitle;
+		m_achieveDescription = achieveDescription;
+		m_achieveScore = achieveScore;
 	}
 	string getAchieveTitle()
 	{
+		cout << "Please enter a title for your achievement:" << endl;
+		cin >> m_achieveTitle; // change this to a getline
 		return m_achieveTitle;
 	}	
 	string getAchieveDescription()
 	{
+		cout << "Please enter a description for your achievement:" << endl;
+		cin >> m_achieveDescription; // change this to a getline
 		return m_achieveDescription;
 	}	
 	int getAchieveScore()
 	{
+		cout << "Please enter a score for your achievement:" << endl;
+		cin >> m_achieveScore; // change this to a getline
 		return m_achieveScore;
 	}
 };
