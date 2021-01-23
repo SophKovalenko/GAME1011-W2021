@@ -34,11 +34,6 @@ public:
 	{
 		return m_manufacturer;
 	}
-	void displayInfo() const
-	{
-		cout << "You have chosen the " << m_platformName << " from " << m_manufacturer << endl;
-
-	}
 };
 
 class Game : public Platform
@@ -80,10 +75,6 @@ public:
 	string getGameDeveloper()
 	{
 		return m_gameDeveloper;
-	}
-	void displayInfo() 
-	{
-		cout << "You have chosen the " << m_gameName << " from " << m_gamePublisher << " by " << m_gameDeveloper << endl;
 	}
 };
 
