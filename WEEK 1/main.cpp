@@ -11,7 +11,6 @@ int main()
 	int gameNum, achieveNum;
 	string achieveTitle, achieveDesc, achieveScore;
 	Achievement* pAchieve = nullptr;
-	//Game* pGame = nullptr;
 
 
 	cout << "Welcome to the Hall of Achievements!" << endl;
@@ -51,7 +50,7 @@ int main()
 
 		for (int index = 0; index < numGames; index++)
 		{
-			cout << game[index].getGameName() << endl;
+			cout << game[index].getGameName() << " by " << game[index].getGamePublisher() << " from " << game[index].getGameDeveloper() << endl;
 		}
 
 		
@@ -121,7 +120,7 @@ int main()
 
 		for (int index = 0; index < numGames; index++)
 		{
-			cout << game[index].getGameName() << endl;
+			cout << game[index].getGameName() << " by " << game[index].getGamePublisher() << " from " << game[index].getGameDeveloper() << endl;
 		}
 
 
@@ -189,7 +188,7 @@ int main()
 
 		for (int index = 0; index < numGames; index++)
 		{
-			cout << game[index].getGameName() << endl;
+			cout << game[index].getGameName() << " by " << game[index].getGamePublisher() << " from " << game[index].getGameDeveloper() << endl;
 		}
 
 		cout << endl;
@@ -256,7 +255,7 @@ int main()
 
 		for (int index = 0; index < numGames; index++)
 		{
-			cout << game[index].getGameName() << endl;
+			cout << game[index].getGameName() << " by " << game[index].getGamePublisher() << " from " << game[index].getGameDeveloper() << endl;
 		}
 
 
@@ -324,7 +323,7 @@ int main()
 
 		for (int index = 0; index < numGames; index++)
 		{
-			cout << game[index].getGameName() << endl;
+			cout << game[index].getGameName() << " by " << game[index].getGamePublisher() << " from " << game[index].getGameDeveloper() << endl;
 		}
 
 		cout << endl;
