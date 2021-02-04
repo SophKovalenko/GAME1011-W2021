@@ -3,7 +3,7 @@
 #include "Classes.h"
 using namespace std;
 
-int main()
+/*int main()
 {
 	int choice;
 	const int numPlatforms = 5;
@@ -380,4 +380,4 @@ int main()
 
 
 	return 0;
-}
+}*/
