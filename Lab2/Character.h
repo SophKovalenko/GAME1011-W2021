@@ -8,14 +8,11 @@ class Character
 protected: 
 	string m_name;
 	int m_health;
-	string m_strength;
-	string m_weakness;
-	string m_specialAbility;
 	//int m_accessNum;
 	//Weapon* m_weapon;
 
 public:
-	Character()
+	Character(string pName, int pHealth)
 	{
 		setName("");
 		setHealth(100);

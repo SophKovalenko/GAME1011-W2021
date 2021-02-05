@@ -5,19 +5,18 @@ using namespace std;
 
 class Ghost : public Character
 {
-	//string m_name;
-	//string m_weakness;
-	//string m_specialAbility;
+private:
+	string m_title;
+	string m_strength;
+	string m_weakness;
 	//invisible/ hard to detect, deals low damage
 
 public: 
-	Ghost(string pName, int pHealth, string pStrength, string pWeakness, string pSpecialAbility)
+	Ghost(string pName, int pHealth, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth)
 	{
-		m_name = pName;
-		m_health = pHealth;
-		m_strength = pStrength;
-		m_weakness = pWeakness;
-		m_specialAbility = pSpecialAbility;
+		setStrength("Invisible to enemies - *Increased Evasion*");
+		setWeakness("Flimsy - *Low Melee Damage*");
+		setTitle("See-Through");
 	}
 
 	string getStrength() const
@@ -40,19 +39,32 @@ public:
 		m_weakness = pWeakness;
 	}
 
-	string getSpecialAbility() const
+	void setTitle(string title)
 	{
-		return m_specialAbility;
+		this->m_title = title;
 	}
 
-	void setSpecialAbility(string pSpecialAbility)
+	string getName() const
 	{
-		m_specialAbility = pSpecialAbility;
+		return m_title + " " + Character::getName();
 	}
 };
 
 class Rock : public Character
 {
+private:
+	string m_title;
+	string m_strength;
+	string m_weakness;
+
+public:
+	Rock(string pName, int pHealth, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth)
+	{
+		setStrength(m_strength);
+		setWeakness(m_weakness);
+		setTitle(m_title);
+	}
+
 	// tough, deal & takes a lot of damage
 	string getStrength() const
 	{
@@ -74,19 +86,32 @@ class Rock : public Character
 		m_weakness = pWeakness;
 	}
 
-	string getSpecialAbility() const
+	void setTitle(string title)
 	{
-		return m_specialAbility;
+		this->m_title = title;
 	}
 
-	void setSpecialAbility(string pSpecialAbility)
+	string getName() const
 	{
-		m_specialAbility = pSpecialAbility;
+		return m_title + " " + m_name;
 	}
 };
 
 class Lightning : public Character
 {
+private:
+	string m_title;
+	string m_strength;
+	string m_weakness;
+
+public:
+	Lightning(string pName, int pHealth, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth)
+	{
+		setStrength(m_strength);
+		setWeakness(m_weakness);
+		setTitle(m_title);
+	}
+
 	// quick, hard to hit (evasive), hard to block
 	string getStrength() const
 	{
@@ -108,13 +133,13 @@ class Lightning : public Character
 		m_weakness = pWeakness;
 	}
 
-	string getSpecialAbility() const
+	void setTitle(string title)
 	{
-		return m_specialAbility;
+		this->m_title = title;
 	}
 
-	void setSpecialAbility(string pSpecialAbility)
+	string getName() const
 	{
-		m_specialAbility = pSpecialAbility;
+		return m_title + " " + m_name;
 	}
 };

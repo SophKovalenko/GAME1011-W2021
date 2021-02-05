@@ -1,6 +1,7 @@
 #include "Weapon.h"
 #include <cstdlib>
 
+
 WeaponArray::WeaponArray(int arraySize)
 {
 	this->arraySize = 0;
