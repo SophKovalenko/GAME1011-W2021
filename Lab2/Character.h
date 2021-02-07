@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 #include "Weapon.h"
 using namespace std;
 
@@ -8,7 +9,6 @@ class Character
 protected: 
 	string m_name;
 	int m_health;
-	//int m_accessNum;
 	//Weapon* m_weapon;
 
 public:
@@ -19,14 +19,14 @@ public:
 		//setWeapon();
 	}
 
-	string getName() const
+	virtual string getName() const
 	{
 		return m_name;
 	}
 
 	void setName(string pName)
 	{
-		m_name = pName;
+		this->m_name = pName;
 	}
 
 	int getHealth() const
@@ -41,7 +41,4 @@ public:
 
 };
 
-//so our predefined characters can be assigned weapons beforehand, and then as the user chooses a character they name it, 
-	//and we save it into the user's character array. 
-	//The user can then select which character to  delete from the array after creating characters
 

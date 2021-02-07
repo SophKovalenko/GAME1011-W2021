@@ -18,6 +18,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CharacterArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Weapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -26,10 +29,13 @@
     <ClInclude Include="Character.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Weapon.h">
+    <ClInclude Include="CustomCharacters.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="CustomCharacters.h">
+    <ClInclude Include="CharacterArray.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

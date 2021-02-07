@@ -1,8 +1,80 @@
 #pragma once
 #include <iostream>
+#include <string>
 # include "Character.h"
 using namespace std;
 
+enum ElementType { Dummy, Air, Rock, Lightning, Flame };
+enum SpecialAbilityType {Dummy, Invisible, Tough, Quick, Fireproof };
+enum TitleType { Dummy, Spooky, Goofy, Invincible, Dashing };
+
+class Element : public Character
+{
+private:
+	string m_elementType;
+
+public:
+	Element(string pName, int pHealth, string pElement, string pStrength) : Character(pName, pHealth)
+	{
+		setElement(pElement);
+	}
+
+	string getElement() const
+	{
+		return m_elementType;
+	}
+
+	void setElement(string pElement)
+	{
+		m_elementType = pElement;
+	}
+};
+
+class Ability : public Element
+{
+private:
+	string m_strength;
+
+public:
+	Ability(string pName, int pHealth, string pElement, string pStrength) : Element(pName, pHealth, pElement)
+	{
+		setStrength(pStrength);
+	}
+
+	string getStrength() const
+	{
+		return m_strength;
+	}
+
+	void setStrength(string pStrength)
+	{
+		m_strength = pStrength;
+	}
+};
+
+class Title : public Ability
+{
+private:
+	string m_title;
+
+public:
+	Title(string pName, int pHealth, string pElement, string pStrength, string pTitle) : Ability(pName, pHealth, pElement, pStrength)
+	{
+		setTitle(pTitle);
+	}
+
+	void setTitle(string pTitle)
+	{
+		this->m_title = pTitle;
+	}
+
+	virtual string getName() const
+	{
+		return m_title + " " + Character::getName();
+	}
+};
+
+/*
 class Ghost : public Character
 {
 private:
@@ -11,7 +83,7 @@ private:
 	string m_weakness;
 	//invisible/ hard to detect, deals low damage
 
-public: 
+public:
 	Ghost(string pName, int pHealth, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth)
 	{
 		setStrength("Invisible to enemies - *Increased Evasion*");
@@ -44,102 +116,10 @@ public:
 		this->m_title = title;
 	}
 
-	string getName() const
+	virtual string getName() const
 	{
 		return m_title + " " + Character::getName();
 	}
 };
 
-class Rock : public Character
-{
-private:
-	string m_title;
-	string m_strength;
-	string m_weakness;
-
-public:
-	Rock(string pName, int pHealth, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth)
-	{
-		setStrength(m_strength);
-		setWeakness(m_weakness);
-		setTitle(m_title);
-	}
-
-	// tough, deal & takes a lot of damage
-	string getStrength() const
-	{
-		return m_strength;
-	}
-
-	void setStrength(string pStrength)
-	{
-		m_strength = pStrength;
-	}
-
-	string getWeakness() const
-	{
-		return m_weakness;
-	}
-
-	void setWeakness(string pWeakness)
-	{
-		m_weakness = pWeakness;
-	}
-
-	void setTitle(string title)
-	{
-		this->m_title = title;
-	}
-
-	string getName() const
-	{
-		return m_title + " " + m_name;
-	}
-};
-
-class Lightning : public Character
-{
-private:
-	string m_title;
-	string m_strength;
-	string m_weakness;
-
-public:
-	Lightning(string pName, int pHealth, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth)
-	{
-		setStrength(m_strength);
-		setWeakness(m_weakness);
-		setTitle(m_title);
-	}
-
-	// quick, hard to hit (evasive), hard to block
-	string getStrength() const
-	{
-		return m_strength;
-	}
-
-	void setStrength(string pStrength)
-	{
-		m_strength = pStrength;
-	}
-
-	string getWeakness() const
-	{
-		return m_weakness;
-	}
-
-	void setWeakness(string pWeakness)
-	{
-		m_weakness = pWeakness;
-	}
-
-	void setTitle(string title)
-	{
-		this->m_title = title;
-	}
-
-	string getName() const
-	{
-		return m_title + " " + m_name;
-	}
-};
+*/
