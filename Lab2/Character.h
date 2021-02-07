@@ -9,14 +9,22 @@ class Character
 protected: 
 	string m_name;
 	int m_health;
-	//Weapon* m_weapon;
+	Weapon m_weapon;
 
 public:
-	Character(string pName, int pHealth)
+	Character()
+	{}
+
+	Character(string pName, int pHealth, Weapon pWeapon)
 	{
 		setName("");
 		setHealth(100);
-		//setWeapon();
+		setWeapon(pWeapon);
+	}
+
+	~Character()
+	{
+
 	}
 
 	virtual string getName() const
@@ -38,6 +46,19 @@ public:
 	{
 		m_health = pHealth;
 	}
+
+	Weapon getWeapon() const
+	{
+		return m_weapon;
+	}
+
+	void setWeapon(Weapon pWeapon)
+	{
+		m_weapon = pWeapon;
+	}
+
+
+	virtual void displayInfo() const = 0; // pure virtual function
 
 };
 

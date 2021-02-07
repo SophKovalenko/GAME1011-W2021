@@ -1,22 +1,63 @@
 #pragma once
+#include <string>
+using namespace std;
 
-class Weapon
+class Weapon : public Character
 {
 private:
 	string m_weaponName,
 		m_description,
-		m_damageValue;
 	    m_specialAbility;
+	int m_damageValue;
 
 public:
+	Weapon(string pWeaponName, string pDescription, int pDamageValue, string pSpecialAbility)
+	{
+		setWeaponName(pWeaponName);
+		setDescription(pDescription);
+		setDamageValue(pDamageValue);
+		setSpecialAbility(pSpecialAbility);
+
+	}
+	string getWeaponName() const
+	{
+		return m_weaponName;
+	}
+
+	void setWeaponName(string pWeaponName)
+	{
+		m_weaponName = pWeaponName;
+	}
+
+	string getDescription() const
+	{
+		return m_description;
+	}
+
+	void setDescription(string pDescription)
+	{
+		m_description = pDescription;
+	}
+
+	int getDamageValue() const
+	{
+		return m_damageValue;
+	}
+
+	void setDamageValue(int pDamageValue)
+	{
+		m_damageValue = pDamageValue;
+	}
+
+
 	string getSpecialAbility() const
 	{
 		return m_specialAbility;
 	}
 
-	void setSpecialAbility(string specialAbility)
+	void setSpecialAbility(string pSpecialAbility)
 	{
-		m_specialAbility = specialAbility;
+		m_specialAbility = pSpecialAbility;
 	}
 
 };

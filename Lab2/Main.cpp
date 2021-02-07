@@ -3,6 +3,7 @@
 #include"Character.h"
 #include"CustomCharacters.h"
 #include "CharacterArray.h"
+#include "Weapon.h"
 using namespace std;
 
 const string eType[] { "Dummy", "Air", "Rock", "Lightning", "Flame" };
@@ -11,6 +12,22 @@ const string tType[]{ "Dummy", "Super Spooky", "Goofy", "New and Improved", "Das
 
 int main()
 {
+	const int num_weapons = 5;
+
+	Weapon* arr[num_weapons] =
+	{
+	new Weapon("Dummy", "Dummy", 0, "Dummy"),
+	new Weapon("Mace", "Spiky stick of terror", 150, "Spikes get stuck in enemy - may cause Bleeding"),
+	new Weapon("Bow", "No enemy is out of reach with this", 100, "Arrows can pierce through any shield - Unblockable"),
+	new Weapon("Hammer", "Not just for crafting", 200, "Heavy weapon deals extra damage - may cause Stun"),
+	new Weapon("Chemistry Set", "Blow things up- on purpose", 300, "Longer cooldown period but higher damage - may cause InstaKill")
+	};
+
+	for (int i = 0; i < num_weapons; i++)
+	{
+		cout << arr[i]->displayInfo() << endl;
+	}
+
 	char choice, repeat;
 	string name;
 	string element, strength, title;
@@ -66,7 +83,7 @@ int main()
 			active = false;
 		}
 	} while (active = true);
-		break;
+	break;
 
 	case 2:
 		break;
@@ -77,6 +94,7 @@ int main()
 	case 4: exit(0);
 
 	}
+
 	//Character* pCharacter = new Title("Gary", 100, "Invisibility: Undetectable by enemies.", "Flimsy: Low attack power.", "See-Through");
 
 	//static_cast<Title*>(pCharacter)->setTitle("Prince");
