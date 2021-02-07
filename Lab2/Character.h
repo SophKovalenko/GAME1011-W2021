@@ -15,7 +15,7 @@ public:
 	Character()
 	{}
 
-	Character(string pName, int pHealth, Weapon pWeapon)
+	Character(string pName, int pHealth, Weapon pWeapon) 
 	{
 		setName("");
 		setHealth(100);
