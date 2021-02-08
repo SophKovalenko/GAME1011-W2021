@@ -16,10 +16,10 @@ int main()
 	Weapon* arr[num_weapons] =
 	{
 	//new Weapon("Dummy", "Dummy", 0, "Dummy"),
-	new Weapon("Mace", "Spiky stick of terror", 150, "Spikes get stuck in enemy - may cause Bleeding"),
-	new Weapon("Bow", "No enemy is out of reach with this", 100, "Arrows can pierce through any shield - Unblockable"),
-	new Weapon("Hammer", "Not just for crafting", 200, "Heavy weapon deals extra damage - may cause Stun"),
-	new Weapon("Chemistry Set", "Blow things up- on purpose", 300, "Longer cooldown period but higher damage - may cause InstaKill")
+	new Weapon("Mace:", "Spiky stick of terror", 150, "Spikes get stuck in enemy - may cause Bleeding"),
+	new Weapon("Bow:", "No enemy is out of reach with this", 100, "Arrows can pierce through any shield - Unblockable"),
+	new Weapon("Hammer:", "Not just for crafting", 200, "Heavy weapon deals extra damage - may cause Stun"),
+	new Weapon("Chemistry Set:", "Blow things up- on purpose", 300, "Longer cooldown period but higher damage - may cause InstaKill")
 	};
 
 	const int num_characters = 3;
@@ -29,8 +29,7 @@ int main()
 		new Rock()
 	};
 
-	char choice2, repeat;
-	int choice;
+	int choice, choice2;
 	string name;
 	string element, strength, title;
 
@@ -59,12 +58,6 @@ int main()
 		cin >> name;
 		cout << endl;
 
-		cout << "Your character can be of type" << endl;
-		cout << "1. Ghost, 2.Lightning or 3.Rock" << endl;
-		cout << "Please enter the number that corresponds with your choice." << endl;
-		cin >> choice2;
-		cout << endl;
-
 		cout << "The following weapons are available." << endl;
 
 		for (int i = 0; i < num_weapons; i++)
@@ -72,24 +65,27 @@ int main()
 			cout << *arr[i] << endl;
 		}
 
+		cout << endl;
+
 		cout << "Your character can be of type" << endl;
 		cout << "1. Ghost, 2.Lightning or 3.Rock" << endl;
 		cout << "Please enter the number that corresponds with your choice." << endl;
 		cin >> choice2;
 
-		if (choice2 == 1)
+		if (choice2 = 1)
 		{
-			cout << "You have created: " << characterArray[0] << endl;
+			Ghost ghost;
+			//cout << "You have created: " << ghost.displayInfo() << endl;
 		}
 
-		if (choice2 == 2)
+		if (choice2 = 2)
 		{
-			cout << "You have created: " << characterArray[1] << endl;
+			cout << "You have created: " << new Lightning << endl;
 		}
 
-		if (choice2 == 3)
+		if (choice2 = 3)
 		{
-			cout << "You have created: " << characterArray[2] << endl;
+			cout << "You have created: " << new Rock << endl;
 		}
 
 		goto MAINMENU;
@@ -97,12 +93,12 @@ int main()
 
 	case 2: 	
 		
-		for (int i = 0; i < num_characters; i++)
+		/*for (int i = 0; i < num_characters; i++)
 	{
 		cout << characterArray[i] << endl;
 	}
 
-		goto MAINMENU;
+		goto MAINMENU;*/
 		break;
 
 	case 3: cout << "Which character would you like to delete?" << endl;
@@ -110,16 +106,17 @@ int main()
 
 		if (choice == 1)
 		{
-
+			//delete
 		}
 
 		if (choice == 2)
 		{
-
+			//delete
 		}
 
 		if (choice == 3)
 		{
+			//delete
 		}
 		goto MAINMENU;
 		break;

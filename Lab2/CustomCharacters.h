@@ -18,6 +18,9 @@ public:
 
 	Ghost(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon, pStrength, pWeakness)
 	{
+		setName("George");
+		setHealth(100);
+		//setWeapon();
 		setStrength("Invisible to enemies - *Increased Evasion*");
 		setWeakness("Flimsy - *Low Melee Damage*");
 		setTitle("See-Through");
@@ -57,6 +60,8 @@ public:
 
 	Lightning(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon, pStrength, pWeakness)
 	{
+		setName("Jerry");
+		setHealth(120);
 		setStrength("Quick - *High chance of dodging enemy attacks*");
 		setWeakness("Burnout - *Power needs to recharge*");
 		setTitle("Shocking");
@@ -96,6 +101,8 @@ public:
 
 	Rock(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon, pStrength, pWeakness)
 	{
+		setName("Morgana");
+		setHealth(200);
 		setStrength("Invicible - *Chance to completely resist damage*");
 		setWeakness("Slow - *Hard to avoid incoming enemies*");
 		setTitle("Tough-Guy");
