@@ -10,21 +10,26 @@ protected:
 	string m_name;
 	int m_health;
 	Weapon m_weapon;
+	string m_strength;
+	string m_weakness;
 
 public:
 	Character()
 	{}
 
-	Character(string pName, int pHealth, Weapon pWeapon) 
+	Character(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness) 
 	{
-		setName("");
-		setHealth(100);
+		setName(pName);
+		setHealth(pHealth);
 		setWeapon(pWeapon);
+		setStrength(pStrength);
+		setWeakness(pWeakness);
+	
 	}
 
 	~Character()
 	{
-
+		//delete character
 	}
 
 	virtual string getName() const
@@ -37,7 +42,7 @@ public:
 		this->m_name = pName;
 	}
 
-	int getHealth() const
+	virtual int getHealth() const
 	{
 		return m_health;
 	}
@@ -47,7 +52,7 @@ public:
 		m_health = pHealth;
 	}
 
-	Weapon getWeapon() const
+	virtual Weapon getWeapon() const
 	{
 		return m_weapon;
 	}
@@ -57,6 +62,25 @@ public:
 		m_weapon = pWeapon;
 	}
 
+	virtual string getStrength() const
+	{
+		return m_strength;
+	}
+
+	void setStrength(string pStrength)
+	{
+		m_strength = pStrength;
+	}
+
+	virtual string getWeakness() const
+	{
+		return m_weakness;
+	}
+
+	void setWeakness(string pWeakness)
+	{
+		m_weakness = pWeakness;
+	}
 
 	virtual void displayInfo() const = 0; // pure virtual function
 

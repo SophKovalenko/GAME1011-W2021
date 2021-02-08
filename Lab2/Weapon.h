@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class Weapon : public Character
+class Weapon 
 {
 private:
 	string m_weaponName,
@@ -11,6 +11,9 @@ private:
 	int m_damageValue;
 
 public:
+	Weapon()
+	{}
+
 	Weapon(string pWeaponName, string pDescription, int pDamageValue, string pSpecialAbility)
 	{
 		setWeaponName(pWeaponName);
@@ -60,4 +63,9 @@ public:
 		m_specialAbility = pSpecialAbility;
 	}
 
+	friend ostream& operator<<(ostream& out, Weapon pWeapon)
+	{
+		out << pWeapon.getWeaponName() << " " << pWeapon.getDescription() << " " << pWeapon.getDamageValue()<< " " << pWeapon.getSpecialAbility();
+		return out;
+	}
 };

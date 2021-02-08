@@ -1,43 +1,26 @@
 #pragma once
 #include <iostream>
 #include <string>
-# include "Character.h"
+#include "Character.h"
+#include "Weapon.h"
+
 using namespace std;
 
 class Ghost : public Character
 {
 private:
 	string m_title;
-	string m_strength;
-	string m_weakness;
 	//invisible/ hard to detect, deals low damage
 
 public:
-	Ghost(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon)
+	Ghost()
+	{}
+
+	Ghost(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon, pStrength, pWeakness)
 	{
 		setStrength("Invisible to enemies - *Increased Evasion*");
 		setWeakness("Flimsy - *Low Melee Damage*");
 		setTitle("See-Through");
-	}
-
-	string getStrength() const
-	{
-		return m_strength;
-	}
-
-	void setStrength(string pStrength)
-	{
-		m_strength = pStrength;
-	}
-
-	string getWeakness() const
-	{
-		return m_weakness;
-	}
-
-	void setWeakness(string pWeakness)
-	{
-		m_weakness = pWeakness;
 	}
 
 	void setTitle(string title)
@@ -53,6 +36,9 @@ public:
 	virtual void displayInfo() const
 	{
 		cout << "Creating character " << m_name << " with a health of " << m_health << " hp." << endl;
+
+		cout << "This character's strength is: " << m_strength << " and their weakness is " << m_weakness << endl;
+
 		cout << "This character weilds the " << m_weapon.getWeaponName() << " which " 
 			<< m_weapon.getDescription() << " and deals " << m_weapon.getDamageValue() << " damage "<<  m_weapon.getSpecialAbility();
 	}
@@ -64,34 +50,16 @@ private:
 	string m_title;
 	string m_strength;
 	string m_weakness;
-	//invisible/ hard to detect, deals low damage
 
 public:
-	Lightning(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon)
-	{
-		setStrength("Invisible to enemies - *Increased Evasion*");
-		setWeakness("Flimsy - *Low Melee Damage*");
-		setTitle("See-Through");
-	}
+	Lightning()
+	{}
 
-	string getStrength() const
+	Lightning(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon, pStrength, pWeakness)
 	{
-		return m_strength;
-	}
-
-	void setStrength(string pStrength)
-	{
-		m_strength = pStrength;
-	}
-
-	string getWeakness() const
-	{
-		return m_weakness;
-	}
-
-	void setWeakness(string pWeakness)
-	{
-		m_weakness = pWeakness;
+		setStrength("Quick - *High chance of dodging enemy attacks*");
+		setWeakness("Burnout - *Power needs to recharge*");
+		setTitle("Shocking");
 	}
 
 	void setTitle(string title)
@@ -107,6 +75,9 @@ public:
 	virtual void displayInfo() const
 	{
 		cout << "Creating character " << m_name << " with a health of " << m_health << " hp." << endl;
+
+		cout << "This character's strength is: " << m_strength << " and their weakness is " << m_weakness << endl;
+
 		cout << "This character weilds the " << m_weapon.getWeaponName() << " which "
 			<< m_weapon.getDescription() << " and deals " << m_weapon.getDamageValue() << " damage " << m_weapon.getSpecialAbility();
 	}
@@ -118,34 +89,16 @@ private:
 	string m_title;
 	string m_strength;
 	string m_weakness;
-	//invisible/ hard to detect, deals low damage
 
 public:
-	Rock(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon)
-	{
-		setStrength("Invisible to enemies - *Increased Evasion*");
-		setWeakness("Flimsy - *Low Melee Damage*");
-		setTitle("See-Through");
-	}
+	Rock()
+	{}
 
-	string getStrength() const
+	Rock(string pName, int pHealth, Weapon pWeapon, string pStrength, string pWeakness, string pTitle) : Character(pName, pHealth, pWeapon, pStrength, pWeakness)
 	{
-		return m_strength;
-	}
-
-	void setStrength(string pStrength)
-	{
-		m_strength = pStrength;
-	}
-
-	string getWeakness() const
-	{
-		return m_weakness;
-	}
-
-	void setWeakness(string pWeakness)
-	{
-		m_weakness = pWeakness;
+		setStrength("Invicible - *Chance to completely resist damage*");
+		setWeakness("Slow - *Hard to avoid incoming enemies*");
+		setTitle("Tough-Guy");
 	}
 
 	void setTitle(string title)
@@ -161,6 +114,9 @@ public:
 	virtual void displayInfo() const
 	{
 		cout << "Creating character " << m_name << " with a health of " << m_health << " hp." << endl;
+
+		cout << "This character's strength is: " << m_strength << " and their weakness is " << m_weakness << endl;
+
 		cout << "This character weilds the " << m_weapon.getWeaponName() << " which "
 			<< m_weapon.getDescription() << " and deals " << m_weapon.getDamageValue() << " damage " << m_weapon.getSpecialAbility();
 	}

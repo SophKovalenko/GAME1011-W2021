@@ -12,30 +12,34 @@ const string tType[]{ "Dummy", "Super Spooky", "Goofy", "New and Improved", "Das
 
 int main()
 {
-	const int num_weapons = 5;
-
+	const int num_weapons = 4;
 	Weapon* arr[num_weapons] =
 	{
-	new Weapon("Dummy", "Dummy", 0, "Dummy"),
+	//new Weapon("Dummy", "Dummy", 0, "Dummy"),
 	new Weapon("Mace", "Spiky stick of terror", 150, "Spikes get stuck in enemy - may cause Bleeding"),
 	new Weapon("Bow", "No enemy is out of reach with this", 100, "Arrows can pierce through any shield - Unblockable"),
 	new Weapon("Hammer", "Not just for crafting", 200, "Heavy weapon deals extra damage - may cause Stun"),
 	new Weapon("Chemistry Set", "Blow things up- on purpose", 300, "Longer cooldown period but higher damage - may cause InstaKill")
 	};
 
-	for (int i = 0; i < num_weapons; i++)
-	{
-		cout << arr[i]->displayInfo() << endl;
-	}
+	const int num_characters = 3;
+	Character* characterArray[num_characters] = {
+		new Lightning(),
+		new Ghost(),
+		new Rock()
+	};
 
-	char choice, repeat;
+	char choice2, repeat;
+	int choice;
 	string name;
 	string element, strength, title;
-	bool active = false;
 
 	//Main menu
 	cout << "Welcome to the Character Customizer 4000!" << endl;
 	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl << endl;
+
+	MAINMENU:
+
 	cout << "Please select a number based on the following options:" << endl;
 	cout << "1. Create new character." << endl;
 	cout << "2. View all existing characters." << endl;
@@ -46,49 +50,78 @@ int main()
 
 	switch (choice)
 	{
-	case 1: do
-	{
-		bool active = true;
+	case 1:  
 
-		Character* pCharacter = new Title("", 100, "", "", "");
+		//Character* pCharacter = new Lightning("", 100, "", "", "");
 
 		cout << "You have chosen to create a new character." << endl;
 		cout << "Please enter the name for your character." << endl;
 		cin >> name;
-		static_cast<Title*>(pCharacter)->setName(name);
+		cout << endl;
 
-		cout << "Your character can be made up of the following elements." << endl;
-		cout << "1. Air  2. Rock  3. Lightning  4. Flame" << endl;
-		cout << "Which element would you like to give your character?" << endl;
-		cin >> element;
-		static_cast<Title*>(pCharacter)->setElement(element);
+		cout << "Your character can be of type" << endl;
+		cout << "1. Ghost, 2.Lightning or 3.Rock" << endl;
+		cout << "Please enter the number that corresponds with your choice." << endl;
+		cin >> choice2;
+		cout << endl;
 
-		cout << "Your character can have the following strengths." << endl;
-		cout << "1. Invisible  2. Tough  3. Quick  4. Fireproof" << endl;
-		cout << "Which ability would you like to give your character?" << endl;
-		cin >> strength;
-		static_cast<Title*>(pCharacter)->setStrength(strength);
+		cout << "The following weapons are available." << endl;
 
-		cout << "Your character can have the following titles." << endl;
-		cout << "1. Spooky  2. Goofy  3. Invincible  4. Dashing" << endl;
-		cout << "Which element would you like to give your character?" << endl;
-		cin >> title;
-		static_cast<Title*>(pCharacter)->setTitle(title);
-
-		cout << "Would you like to create another character? Press 1 for yes and 2 to return to main menu." << endl;
-		cin >> repeat;
-
-		if (repeat == 2)
+		for (int i = 0; i < num_weapons; i++)
 		{
-			active = false;
+			cout << *arr[i] << endl;
 		}
-	} while (active = true);
+
+		cout << "Your character can be of type" << endl;
+		cout << "1. Ghost, 2.Lightning or 3.Rock" << endl;
+		cout << "Please enter the number that corresponds with your choice." << endl;
+		cin >> choice2;
+
+		if (choice2 == 1)
+		{
+			cout << "You have created: " << characterArray[0] << endl;
+		}
+
+		if (choice2 == 2)
+		{
+			cout << "You have created: " << characterArray[1] << endl;
+		}
+
+		if (choice2 == 3)
+		{
+			cout << "You have created: " << characterArray[2] << endl;
+		}
+
+		goto MAINMENU;
 	break;
 
-	case 2:
+	case 2: 	
+		
+		for (int i = 0; i < num_characters; i++)
+	{
+		cout << characterArray[i] << endl;
+	}
+
+		goto MAINMENU;
 		break;
 
-	case 3:
+	case 3: cout << "Which character would you like to delete?" << endl;
+		cin >> --choice;
+
+		if (choice == 1)
+		{
+
+		}
+
+		if (choice == 2)
+		{
+
+		}
+
+		if (choice == 3)
+		{
+		}
+		goto MAINMENU;
 		break;
 
 	case 4: exit(0);
@@ -109,3 +142,23 @@ int main()
 
 	return 0;
 }
+
+/*
+cout << "Your character can be made up of the following elements." << endl;
+cout << "1. Air  2. Rock  3. Lightning  4. Flame" << endl;
+cout << "Which element would you like to give your character?" << endl;
+cin >> element;
+static_cast<Title*>(pCharacter)->setElement(element);
+
+cout << "Your character can have the following strengths." << endl;
+cout << "1. Invisible  2. Tough  3. Quick  4. Fireproof" << endl;
+cout << "Which ability would you like to give your character?" << endl;
+cin >> strength;
+static_cast<Title*>(pCharacter)->setStrength(strength);
+
+cout << "Your character can have the following titles." << endl;
+cout << "1. Spooky  2. Goofy  3. Invincible  4. Dashing" << endl;
+cout << "Which element would you like to give your character?" << endl;
+cin >> title;
+static_cast<Title*>(pCharacter)->setTitle(title);
+*/
