@@ -135,10 +135,10 @@ const string tType[]{ "Dummy", "Super Spooky", "Goofy", "New and Improved", "Das
 	Character* characterArray[] = { new Ghost(),
 									new Rock(),
 		                            new Lightning()
-	};*/
+	}
 
 	return 0;
-}
+}/*
 
 /*
 cout << "Your character can be made up of the following elements." << endl;
