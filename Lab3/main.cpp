@@ -1,48 +1,56 @@
 #include <iostream>
 #include "SimpleVector.h"
 #include "SearchVector.h"
+#include "SortVector.h"
 using namespace std;
 
 int main()
 {
-	const int size = 12;
+	const int size = 12; // Size for all vectors
 
-	SimpleVector<int> intTable(size);
-	SimpleVector<double> doubleTable(size);
+	cout << "SIMPLE VECTOR: " << endl; // Simple vector demo
+	cout << "*****************" << endl;
 
-	for (int i = 0; i < size; i++)
-	{
-		intTable[i] = (i * 3);
-		doubleTable[i] = (i * 5.72);
-	}
-
-	cout << "These values are in intTable:\n";
-	intTable.print();
-
-	cout << "These values are in doubleTable:\n";
-	doubleTable.print();
-
-
-	SearchableVector<int> iTable(size);
-	SearchableVector<double> dTable(size);
+	SimpleVector<int> simpleIntTable(size);
+	SimpleVector<double> simpleDoubleTable(size);
 
 	for (int i = 0; i < size; i++)
 	{
-		iTable[i] = (i * 5);
-		dTable[i] = (i * 3.25);
+		simpleIntTable[i] = (i * 3);
+		simpleDoubleTable[i] = (i * 5.72);
 	}
 
 	cout << "These values are in intTable:\n";
-	iTable.print();
+	simpleIntTable.print();
 
 	cout << "These values are in doubleTable:\n";
-	dTable.print();
+	simpleDoubleTable.print();
+
+	cout << endl << endl;
+
+	cout << "SEARCHABLE VECTOR: " << endl; // Searchable vector demo
+	cout << "*****************" << endl;
+
+	SearchableVector<int> searchIntTable(size);
+	SearchableVector<double> searchDoubleTable(size);
+
+	for (int i = 0; i < size; i++)
+	{
+		searchIntTable[i] = (i * 5);
+		searchDoubleTable[i] = (i * 3.25);
+	}
+
+	cout << "These values are in intTable:\n";
+	searchIntTable.print();
+
+	cout << "These values are in doubleTable:\n";
+	searchDoubleTable.print();
 
 	//Search the vectors
 	int result;
-	cout << "Searching for the number in iTable.\n";
+	cout << "Searching for the number in intTable.\n";
 
-	result = iTable.findItem(5);
+	result = searchIntTable.binarySearch(5);
 	if (result == -1)
 	{
 		cout << "The number was not found." << endl;
@@ -52,5 +60,38 @@ int main()
 		cout << "The number was found at subscript " << result << endl;
 	}
 
+	result = searchDoubleTable.binarySearch(6.7);
+	if (result == -1)
+	{
+		cout << "The number was not found." << endl;
+	}
+	else
+	{
+		cout << "The number was found at subscript " << result << endl;
+	}
+
+	cout << endl << endl;
+
+	cout << "SORTABLE VECTOR: " << endl; // Sortable vector demo
+	cout << "*****************" << endl;
+
+	SortableVector<int> sortIntTable(size);
+	SortableVector<double> sortDoubleTable(size);
+
+	for (int i = 0; i < size; i++)
+	{
+		sortIntTable[i] = (i * 3);
+		sortDoubleTable[i] = (i * 5.72);
+	}
+
+	cout << "These values are in intTable:\n";
+	sortIntTable.SortArray();
+	sortIntTable.print();
+
+	cout << "These values are in doubleTable:\n";
+	sortDoubleTable.SortArray();
+	sortDoubleTable.print();
+
 	return 0;
 }
+
