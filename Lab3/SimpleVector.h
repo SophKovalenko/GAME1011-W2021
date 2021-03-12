@@ -114,18 +114,16 @@ void SimpleVector<T>::pop_back()
 template<class T>
 void SimpleVector<T>::push_back()
 {
-	T size = 13;
 	T element;
 
 	cout << "Please enter the element you would like to add to the array: " << endl;
 	cin >> element;
 
-	for (int i = 0; i < arraySize; i++)
+	aptr[12] = element;
+
+	for (int i = 0; i < (arraySize+1); i++)
 	{
 		cout << aptr[i] << " ";
 	}
-
-	cout << element << endl;
-
 }
 
