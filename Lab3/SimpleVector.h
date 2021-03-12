@@ -94,15 +94,15 @@ void SimpleVector<T>::print() const
 template<class T>
 void SimpleVector<T>::pop_back()
 {
-	for (int i = 0; i < arraySize; i++)
+	cout << "Now removing last element from array..." << endl;
+	
+	for (int i = 0; i < (arraySize - 1); i++)
 	{
-		if (this->operator[] < arraySize)
-		{
-			cout << "Now removing last element from array... " << endl;
-		
-		}
-
+		cout << aptr[i] << " ";
 	}
+
+	cout << endl;
+
 }
 
 template<class T>

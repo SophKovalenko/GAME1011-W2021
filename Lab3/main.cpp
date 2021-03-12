@@ -24,8 +24,9 @@ int main()
 	cout << "These values are in intTable:\n";
 	simpleIntTable.print();
 
-	/*simpleIntTable.pop_back();
-	simpleIntTable.print();*/
+	simpleIntTable.pop_back();
+
+	cout << endl;
 
 	cout << "These values are in doubleTable:\n";
 	//simpleDoubleTable.push_back();
@@ -41,7 +42,7 @@ int main()
 
 	for (int i = 0; i < size; i++)
 	{
-		searchIntTable[i] = (i * 5); // rand num/ not 1 * rand
+		searchIntTable[i] = (i * 5); 
 		searchDoubleTable[i] = (i * 3.25);
 	}
 
