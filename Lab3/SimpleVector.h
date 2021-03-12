@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdlib>
+#include <vector>
 using namespace std;
 
 
@@ -19,6 +20,9 @@ public:
 	{
 		return arraySize;
 	}
+
+	void pop_back();
+	void push_back();
 
 	T& operator[](int);
 	void print() const;
@@ -64,6 +68,7 @@ void SimpleVector<T>::subError() const
 	exit(0); // Quit program
 }
 
+
 template<class T>
 T& SimpleVector<T>::operator[](int sub)
 {
@@ -84,4 +89,32 @@ void SimpleVector<T>::print() const
 	}
 
 	cout << endl;
+}
+
+template<class T>
+void SimpleVector<T>::pop_back()
+{
+	for (int i = 0; i < arraySize; i++)
+	{
+		if (this->operator[] < arraySize)
+		{
+			cout << "Now removing last element from array... " << endl;
+		
+		}
+
+	}
+}
+
+template<class T>
+void SimpleVector<T>::push_back()
+{
+	T element;
+
+	if (this->operator[] < arraySize)
+	{
+		cout << "Please enter the element you would like to add to the array: " << endl;
+		cin << element;
+		
+	}
+
 }

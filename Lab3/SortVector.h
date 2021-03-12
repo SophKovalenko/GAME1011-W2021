@@ -1,5 +1,8 @@
 #pragma once
 #include "SimpleVector.h"
+#include <algorithm>
+#include <functional>
+#include <array>
 
 template <class T>
 class SortableVector : public SimpleVector<T>
@@ -13,7 +16,7 @@ public:
 };
 
 template<class T>
-void SortableVector<T>::SortArray()
+void SortableVector<T>::SortArray() 
 {
 	int sort;
 	bool swap;
@@ -21,15 +24,14 @@ void SortableVector<T>::SortArray()
 	do
 	{
 		swap = false;
-		for (unsigned count = 0; count < this->size(); count++)
+		for (auto count = 0; count < (this->size() - 1); count++)
 		{
-			if (this->operator[](count) > this->operator[](count+1))
+			if (this->operator[](count) > this->operator[](count + 1))
 			{
 				sort = this->operator[](count);
 				this->operator[](count) = this->operator[](count + 1);
 				this->operator[](count + 1) = sort;
 				swap = true;
-
 			}
 		}
 	} while (swap);
