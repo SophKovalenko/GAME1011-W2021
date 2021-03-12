@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdlib>
 #include <vector>
+#include<iostream>
 using namespace std;
 
 
@@ -23,6 +24,11 @@ public:
 
 	void pop_back();
 	void push_back();
+
+	bool isPushingBack()
+	{
+		bool isPushingBack = false;
+	}
 
 	T& operator[](int);
 	void print() const;
@@ -108,13 +114,18 @@ void SimpleVector<T>::pop_back()
 template<class T>
 void SimpleVector<T>::push_back()
 {
+	T size = 13;
 	T element;
 
-	if (this->operator[] < arraySize)
+	cout << "Please enter the element you would like to add to the array: " << endl;
+	cin >> element;
+
+	for (int i = 0; i < arraySize; i++)
 	{
-		cout << "Please enter the element you would like to add to the array: " << endl;
-		cin << element;
-		
+		cout << aptr[i] << " ";
 	}
 
+	cout << element << endl;
+
 }
+

@@ -7,10 +7,10 @@ using namespace std;
 
 int main()
 {
-	const int size = 12; // Size for all vectors
+	int size = 12; // Size for all vectors
 
-	cout << "SIMPLE VECTOR: " << endl; // Simple vector demo
-	cout << "*****************" << endl;
+	cout << "SIMPLE VECTOR DEMO: " << endl; // Simple vector demo
+	cout << "*******************" << endl;
 
 	SimpleVector<int> simpleIntTable(size);
 	SimpleVector<double> simpleDoubleTable(size);
@@ -23,15 +23,14 @@ int main()
 
 	cout << "These values are in intTable:\n";
 	simpleIntTable.print();
-
 	simpleIntTable.pop_back();
-
+	simpleIntTable.push_back();
 	cout << endl;
 
 	cout << "These values are in doubleTable:\n";
-	//simpleDoubleTable.push_back();
 	simpleDoubleTable.print();
-
+	simpleDoubleTable.pop_back();
+	simpleDoubleTable.push_back();
 	cout << endl << endl;
 
 	cout << "SEARCHABLE VECTOR: " << endl; // Searchable vector demo
@@ -55,10 +54,14 @@ int main()
 	cout << endl;
 
 	//Search the vectors
-	int result1, result2;
+	int result1, result2, choice1, choice2;
+
+	cout << "What number would you like to search for?  ";
+	cin >> choice1;
+	cout << endl;
 	cout << "Searching for the number in intTable.\n";
 
-	result1 = searchIntTable.binarySearch(5);
+	result1 = searchIntTable.binarySearch(choice1);
 	if (result1 == -1)
 	{
 		cout << "The number was not found." << endl;
@@ -68,9 +71,11 @@ int main()
 		cout << "The number was found at subscript " << result1 << endl;
 	}
 
+	cout << "What number would you like to search for?  ";
+	cin >> choice2;
 	cout << "Searching for the number in doubleTable.\n";
 
-	result2 = searchDoubleTable.binarySearch(6.7);
+	result2 = searchDoubleTable.binarySearch(choice2);
 	if (result2 == -1)
 	{
 		cout << "The number was not found." << endl;
