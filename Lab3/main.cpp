@@ -57,10 +57,10 @@ int main()
 	int result1, result2, choice1;
 	double choice2;
 
-	cout << "What number would you like to search for?  ";
+	cout << "What number in intTable would you like to search for?  ";
 	cin >> choice1;
 	cout << endl;
-	cout << "Searching for the number in intTable.\n";
+	cout << "Searching for the number " << choice1 << "in intTable.\n";
 
 	result1 = searchIntTable.binarySearch(choice1);
 	if (result1 == -1)
@@ -74,7 +74,8 @@ int main()
 
 	cout << "What number would you like to search for?  ";
 	cin >> choice2;
-	cout << "Searching for the number in doubleTable.\n";
+	cout << endl;
+	cout << "Searching for the number " << choice2 << "in doubleTable.\n";
 
 	result2 = searchDoubleTable.binarySearch(choice2);
 	if (result2 == -1)
@@ -104,14 +105,18 @@ int main()
 	cout << "These values are the unsorted values in intTable:\n";
 	sortIntTable.print();
 
+	cout << endl;
+
 	cout << "These values are the unsorted values in doubleTable:\n";
 	sortDoubleTable.print();
 
-	cout << endl;
+	cout << endl << endl;
 
 	cout << "These values are the sorted values in intTable:\n";
 	sortIntTable.SortArray();
 	sortIntTable.print();
+
+	cout << endl;
 
 	cout << "These values are the sorted values in doubleTable:\n";
 	sortDoubleTable.SortArray();
