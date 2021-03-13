@@ -60,7 +60,7 @@ int main()
 	cout << "What number in intTable would you like to search for?  ";
 	cin >> choice1;
 	cout << endl;
-	cout << "Searching for the number " << choice1 << "in intTable.\n";
+	cout << "Searching for the number " << choice1 << " in intTable.\n";
 
 	result1 = searchIntTable.binarySearch(choice1);
 	if (result1 == -1)
@@ -75,7 +75,7 @@ int main()
 	cout << "What number would you like to search for?  ";
 	cin >> choice2;
 	cout << endl;
-	cout << "Searching for the number " << choice2 << "in doubleTable.\n";
+	cout << "Searching for the number " << choice2 << " in doubleTable.\n";
 
 	result2 = searchDoubleTable.binarySearch(choice2);
 	if (result2 == -1)
