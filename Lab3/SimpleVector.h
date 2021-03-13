@@ -22,13 +22,13 @@ public:
 		return arraySize;
 	}
 
+	int sizeUp() const
+	{
+		return arraySize+1;
+	}
+
 	void pop_back();
 	void push_back();
-
-	bool isPushingBack()
-	{
-		bool isPushingBack = false;
-	}
 
 	T& operator[](int);
 	void print() const;
@@ -102,7 +102,7 @@ void SimpleVector<T>::pop_back()
 {
 	cout << "Now removing last element from array..." << endl;
 	
-	for (int i = 0; i < (arraySize - 1); i++)
+	for (int i = 0; i < (arraySize - 2); i++)
 	{
 		cout << aptr[i] << " ";
 	}
@@ -112,18 +112,23 @@ void SimpleVector<T>::pop_back()
 }
 
 template<class T>
-void SimpleVector<T>::push_back()
+void SimpleVector<T>::push_back() // replace empty placeholder element
 {
 	T element;
 
 	cout << "Please enter the element you would like to add to the array: " << endl;
 	cin >> element;
 
-	aptr[12] = element;
-
-	for (int i = 0; i < (arraySize+1); i++)
+	if (aptr[11] > 0)
 	{
+		cout << "Array is full." << endl;
+	}
+
+	for (int i = 0; i < (arraySize); i++)
+	{
+		aptr[11] = element;
 		cout << aptr[i] << " ";
 	}
+
 }
 

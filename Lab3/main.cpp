@@ -10,12 +10,12 @@ int main()
 	int size = 12; // Size for all vectors
 
 	cout << "SIMPLE VECTOR DEMO: " << endl; // Simple vector demo
-	cout << "*******************" << endl;
+	cout << "*******************" << endl << endl;
 
 	SimpleVector<int> simpleIntTable(size);
 	SimpleVector<double> simpleDoubleTable(size);
 
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size-1; i++)
 	{
 		simpleIntTable[i] = (i * 3);
 		simpleDoubleTable[i] = (i * 5.72);
@@ -25,7 +25,7 @@ int main()
 	simpleIntTable.print();
 	simpleIntTable.pop_back();
 	simpleIntTable.push_back();
-	cout << endl;
+	cout << endl << endl;
 
 	cout << "These values are in doubleTable:\n";
 	simpleDoubleTable.print();
@@ -34,7 +34,7 @@ int main()
 	cout << endl << endl;
 
 	cout << "SEARCHABLE VECTOR: " << endl; // Searchable vector demo
-	cout << "*****************" << endl;
+	cout << "*****************" << endl << endl;
 
 	SearchableVector<int> searchIntTable(size);
 	SearchableVector<double> searchDoubleTable(size);
@@ -54,7 +54,8 @@ int main()
 	cout << endl;
 
 	//Search the vectors
-	int result1, result2, choice1, choice2;
+	int result1, result2, choice1;
+	double choice2;
 
 	cout << "What number would you like to search for?  ";
 	cin >> choice1;
@@ -88,7 +89,7 @@ int main()
 	cout << endl << endl;
 
 	cout << "SORTABLE VECTOR: " << endl; // Sortable vector demo
-	cout << "*****************" << endl;
+	cout << "*****************" << endl << endl;
 
 	SortableVector<int> sortIntTable(size);
 	SortableVector<double> sortDoubleTable(size);
